@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:form id="myForm">
+            <h:inputText a:placeholder="Email" value="#{nilai.email}"/>&nbsp;
+            <h:inputSecret a:placeholder="Password" value="#{nilai.password}"/><hr/><hr/>
+            <h:inputTextarea rows="5" a:placeholder="Comment" value="#{nilai.comment}"/><br/>
+            <h:selectOneMenu value="#{nilai.gender}">
+                <h:outputText value="Select Gender :"/>
+                <f:selectItem itemLabel="Male" itemValue="Male"/>
+                <f:selectItem itemLabel="Female" itemValue="Female"/>
+                <f:selectItem itemLabel="Select"/>
+            </h:selectOneMenu><br/><br/>
+            
+            <h:commandButton value="Get Value"/>&nbsp;
+            
+            <hr/>
+            <h2>Result Value</h2>
+            <h:outputText value="Mengambil Alamat Email --->"/>
+            <h:outputText value="#{nilai.email}"/><br/>
+            <h:outputText value="Mengambil data Password --->"/>
+            <h:outputText value="#{nilai.password}"/><br/>
+            <h:outputText value="Mengambil data Comment --->"/>
+            <h:outputText value="#{nilai.comment}"/><br/>
+            <h:outputText value="Mengambil data Gender --->"/>
+            <h:outputText value="#{nilai.gender}"/><br/>
+        </h:form>
+    </h:body>
+</html>
+
